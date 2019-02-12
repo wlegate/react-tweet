@@ -7,6 +7,7 @@
     "clean": "rm -rf dist",
     "build": "npm run prepublish",
     "prepublish": "npm run build:js",
+    "postinstall": "npm run build",
     "build:js": "babel --plugins transform-runtime ./src/components -d ./lib",
     "start": "webpack-dev-server --hot --inline",
     "build-dev": "webpack -d"
